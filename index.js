@@ -100,7 +100,7 @@ document.getElementById("add").addEventListener("click", function () {
             result *= parseFloat(number);
         } else if (temp == ":") {
             result /= parseFloat(number);
-        } else if (temp == "%") {
+        } else if (temp == "mod") {
             result %= parseFloat(number);
         }
     }
@@ -124,7 +124,7 @@ document.getElementById("substract").addEventListener("click", function () {
             result *= parseFloat(number);
         } else if (temp == ":") {
             result /= parseFloat(number);
-        } else if (temp == "%") {
+        } else if (temp == "mod") {
             result %= parseFloat(number);
         }
     }
@@ -148,7 +148,7 @@ document.getElementById("multiply").addEventListener("click", function () {
             result *= parseFloat(number);
         } else if (temp == ":") {
             result /= parseFloat(number);
-        } else if (temp == "%") {
+        } else if (temp == "mod") {
             result %= parseFloat(number);
         }
     }
@@ -172,7 +172,7 @@ document.getElementById("divide").addEventListener("click", function () {
             result *= parseFloat(number);
         } else if (temp == ":") {
             result /= parseFloat(number);
-        } else if (temp == "%") {
+        } else if (temp == "mod") {
             result %= parseFloat(number);
         }
     }
@@ -196,13 +196,13 @@ document.getElementById("modulo").addEventListener("click", function () {
             result *= parseFloat(number);
         } else if (temp == ":") {
             result /= parseFloat(number);
-        } else if (temp == "%") {
+        } else if (temp == "mod") {
             result %= parseFloat(number);
         }
     }
 
     document.getElementById("calculate").value += "%";
-    temp = "%"
+    temp = "mod"
     number = "";
     disableOperatorButton(true);
     console.log(result);
@@ -217,7 +217,7 @@ document.getElementById("equal").addEventListener("click", function () {
             result *= parseFloat(number);
         } else if (temp == ":") {
             result /= parseFloat(number);
-        } else if (temp == "%") {
+        } else if (temp == "mod") {
             result %= parseFloat(number);
         }
     }
