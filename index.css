@@ -1,0 +1,14 @@
+.numButton {
+    margin: 2px;
+    padding: 10px 20px;
+    min-width: 70px;
+}
+
+.zeroButton {
+    margin: 2px;
+    padding: 10px 107px;
+}
+
+.input {
+    width: 306px;
+}
