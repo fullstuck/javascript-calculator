@@ -201,7 +201,7 @@ document.getElementById("modulo").addEventListener("click", function () {
         }
     }
 
-    document.getElementById("calculate").value += "%";
+    document.getElementById("calculate").value += "mod";
     temp = "mod"
     number = "";
     disableOperatorButton(true);
