@@ -96,9 +96,9 @@ document.getElementById("add").addEventListener("click", function () {
             result += parseFloat(number);
         } else if (temp == "-") {
             result -= parseFloat(number);
-        } else if (temp == "*") {
+        } else if (temp == "x") {
             result *= parseFloat(number);
-        } else if (temp == "/") {
+        } else if (temp == ":") {
             result /= parseFloat(number);
         } else if (temp == "%") {
             result %= parseFloat(number);
@@ -120,9 +120,9 @@ document.getElementById("substract").addEventListener("click", function () {
             result += parseFloat(number);
         } else if (temp == "-") {
             result -= parseFloat(number);
-        } else if (temp == "*") {
+        } else if (temp == "x") {
             result *= parseFloat(number);
-        } else if (temp == "/") {
+        } else if (temp == ":") {
             result /= parseFloat(number);
         } else if (temp == "%") {
             result %= parseFloat(number);
@@ -144,17 +144,17 @@ document.getElementById("multiply").addEventListener("click", function () {
             result += parseFloat(number);
         } else if (temp == "-") {
             result -= parseFloat(number);
-        } else if (temp == "*") {
+        } else if (temp == "x") {
             result *= parseFloat(number);
-        } else if (temp == "/") {
+        } else if (temp == ":") {
             result /= parseFloat(number);
         } else if (temp == "%") {
             result %= parseFloat(number);
         }
     }
 
-    document.getElementById("calculate").value += "*";
-    temp = "*"
+    document.getElementById("calculate").value += "x";
+    temp = "x"
     number = "";
     disableOperatorButton(true);
     console.log(result);
@@ -168,17 +168,17 @@ document.getElementById("divide").addEventListener("click", function () {
             result += parseFloat(number);
         } else if (temp == "-") {
             result -= parseFloat(number);
-        } else if (temp == "*") {
+        } else if (temp == "x") {
             result *= parseFloat(number);
-        } else if (temp == "/") {
+        } else if (temp == ":") {
             result /= parseFloat(number);
         } else if (temp == "%") {
             result %= parseFloat(number);
         }
     }
 
-    document.getElementById("calculate").value += "/";
-    temp = "/"
+    document.getElementById("calculate").value += ":";
+    temp = ":"
     number = "";
     disableOperatorButton(true);
     console.log(result);
@@ -192,9 +192,9 @@ document.getElementById("modulo").addEventListener("click", function () {
             result += parseFloat(number);
         } else if (temp == "-") {
             result -= parseFloat(number);
-        } else if (temp == "*") {
+        } else if (temp == "x") {
             result *= parseFloat(number);
-        } else if (temp == "/") {
+        } else if (temp == ":") {
             result /= parseFloat(number);
         } else if (temp == "%") {
             result %= parseFloat(number);
@@ -213,9 +213,9 @@ document.getElementById("equal").addEventListener("click", function () {
             result += parseFloat(number);
         } else if (temp == "-") {
             result -= parseFloat(number);
-        } else if (temp == "*") {
+        } else if (temp == "x") {
             result *= parseFloat(number);
-        } else if (temp == "/") {
+        } else if (temp == ":") {
             result /= parseFloat(number);
         } else if (temp == "%") {
             result %= parseFloat(number);
