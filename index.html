@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Calculator</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <p id="result"></p>
+                    <input type="text" class="form-control input" id="calculate" placeholder="0">
+                </div>
+                <div>
+                    <button class="numButton" id="add">+</button>
+                    <button class="numButton" id="substract">-</button>
+                    <button class="numButton" id="multiply">x</button>
+                    <button type="submit" class="numButton" id="equal">=</button>
+                </div>
+                <div>
+                    <button class="numButton" id="7">7</button>
+                    <button class="numButton" id="8">8</button>
+                    <button class="numButton" id="9">9</button>
+                    <button class="btn btn-primary numButton" id="clear">C</button>
+                </div>
+                <div>
+                    <button class="numButton" id="4">4</button>
+                    <button class="numButton" id="5">5</button>
+                    <button class="numButton" id="6">6</button>
+                    <button class="numButton" id="divide">/</button>
+                </div>
+                <div>
+                    <button class="numButton" id="1" value="1">1</button>
+                    <button class="numButton" id="2" value="2">2</button>
+                    <button class="numButton" id="3" value="3">3</button>
+                    <button class="numButton" id="modulo">%</button>
+                </div>
+                <div>
+                    <button class="zeroButton" id="0">0</button>
+                    <button class="numButton" id="point">,</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+
+</html>
