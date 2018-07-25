@@ -15,7 +15,7 @@ const cubeAreaFunc = (side) => 6 * (length * length);
 const cubeVolumeFunc = (side) => length * length * length;
 const tubeAreaFunc = (phi, radius, height) => 2 * phi * radius * (height + radius);
 const tubeVolumeFunc = (phi, radius, height) => phi * (radius * radius) * height;
-debugger;
+
 combobox.addEventListener("click", function () {
     var value = combobox.value;
     if (value == "rectangle") {
@@ -42,5 +42,25 @@ area.addEventListener("click", function () {
         total = squareArea(side);
         answer.value = total;
         console.log(total);
+    } else {
+        alert("Choose the shape first!")
+    }
+});
+
+perimeter.addEventListener("click", function () {
+    var value = combobox.value;
+    if (value == "rectangle") {
+        length = textbox1.value;
+        width = textbox2.value;
+        total = rectanglePerimeter(length, width);
+        answer.value = total;
+        console.log(total);
+    } else if (value == "square") {
+        side = textbox1.value;
+        total = squarePerimeter(side);
+        answer.value = total;
+        console.log(total);
+    } else {
+        alert("Choose the shape first!")
     }
 });
