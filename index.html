@@ -13,16 +13,17 @@
 </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid header title">
         <div class="container">
             <h1 class="display-4">Calculator</h1>
+            <h3>Simple Calculator Math and Shape</h1>
         </div>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 app">
                 <div class="form-group">
-                    <p id="output"></p>
+                    <p id="output" class="outcome"></p>
                     <input type="text" class="form-control input" id="calculate" placeholder="0" disabled>
                 </div>
                 <div>
@@ -55,10 +56,10 @@
                 </div>
             </div>
 
-            <div class="col-sm-4">
+            <div class="col-sm-4 app">
                 <div class="form-group row">
-                    <select id="combobox">
-                        <option>--Choose Shape--</option>
+                    <select id="combobox" class="select">
+                        <option>-- Choose Shape --</option>
                         <option value="square">Square</option>
                         <option value="rectangle">Rectangle</option>
                         <option value="circle">Circle</option>
@@ -84,6 +85,7 @@
                 </div>
             </div>
         </div>
+
     </div>
     <script src="index.js"></script>
     <script src="shape.js"></script>
