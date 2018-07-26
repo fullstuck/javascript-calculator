@@ -38,6 +38,12 @@ combobox.addEventListener("click", function () {
         label2.style.display = "none";
         textbox2.style.display = "none";
         perimeter.innerHTML = "Calculate Volume";
+    } else if (value == "cylinder") {
+        label2.style.display = "inline";
+        textbox2.style.display = "inline";
+        label1.innerHTML = "Radius";
+        label2.innerHTML = "Height";
+        perimeter.innerHTML = "Calculate Volume";
     } else {
         alert("Choose the shape first!");
     }
@@ -62,6 +68,11 @@ area.addEventListener("click", function () {
         side = textbox1.value;
         total = cubeArea(side);
         answer.value = total;
+    } else if (value == "cylinder") {
+        radius = textbox1.value;
+        height = textbox2.value;
+        total = cylinderArea(phi, radius, height);
+        answer.value = total;
     } else {
         alert("Choose the shape first!");
     }
@@ -85,6 +96,11 @@ perimeter.addEventListener("click", function () {
     } else if (value == "cube") {
         side = textbox1.value;
         total = cubeVolume(side);
+        answer.value = total;
+    } else if (value == "cylinder") {
+        radius = textbox1.value;
+        height = textbox2.value;
+        total = cylinderVolume(phi, radius, height);
         answer.value = total;
     } else {
         alert("Choose the shape first!")
