@@ -19,7 +19,7 @@ const reset = () => {
 }
 
 const disableButton = (id = "add", isDisable = false) => {
-    document.getElementById(id).disabled = isDisable;
+    $('#' + id).attr("disabled", isDisable);
 }
 
 const disableOperatorButton = (value) => {
@@ -32,13 +32,13 @@ const disableOperatorButton = (value) => {
 }
 
 const addNumber = (num) => {
-    document.getElementById("calculate").value += num;
+    $("#calculate").val($("#calculate").val() + num);
     number += num;
     disableOperatorButton(false);
 }
 
 const clickNumberButton = (num, num1) => {
-    document.getElementById(num).addEventListener("click", function () {
+    $('#' + num).on("click", function () {
         addNumber(num1);
     });
 }
@@ -88,33 +88,33 @@ clickNumberButton("point", ".");
 
 document.getElementById("add").addEventListener("click", function () {
     checkOperator();
-    document.getElementById("calculate").value += "+";
+    $("#calculate").val($("#calculate").val() + "+");
     temp = "+"
 });
 document.getElementById("substract").addEventListener("click", function () {
     checkOperator();
-    document.getElementById("calculate").value += "-";
+    $("#calculate").val($("#calculate").val() + "-");
     temp = "-"
 });
 document.getElementById("multiply").addEventListener("click", function () {
     checkOperator();
-    document.getElementById("calculate").value += "x";
+    $("#calculate").val($("#calculate").val() + "x");
     temp = "x"
 });
 document.getElementById("divide").addEventListener("click", function () {
     checkOperator();
-    document.getElementById("calculate").value += ":";
+    $("#calculate").val($("#calculate").val() + ":");
     temp = ":"
 });
 document.getElementById("modulo").addEventListener("click", function () {
     checkOperator();
-    document.getElementById("calculate").value += "mod";
+    $("#calculate").val($("#calculate").val() + "mod");
     temp = "mod"
 });
 document.getElementById("equal").addEventListener("click", function () {
     checkOperator();
-    document.getElementById("output").innerHTML = document.getElementById("calculate").value + " = " + result;
-    document.getElementById("calculate").value = "";
+    $("#output").html($("#calculate").val() + " = " + result);
+    $("#calculate").val("");
     reset();
 });
 
