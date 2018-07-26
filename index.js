@@ -1,4 +1,5 @@
 // Declare Variable
+
 let temp = "";
 let temp1 = 0;
 let result = 0;
@@ -31,7 +32,7 @@ const disableOperatorButton = (value) => {
 }
 
 const addNumber = (num) => {
-    calculate.value += num;
+    document.getElementById("calculate").value += num;
     number += num;
     disableOperatorButton(false);
 }
@@ -59,6 +60,8 @@ const checkOperator = () => {
             result %= parseFloat(number);
         }
     }
+    number = "";
+    disableOperatorButton(true);
 }
 
 //------------------------------------------------------------------
@@ -83,49 +86,36 @@ clickNumberButton("point", ".");
 //------------------------------------------------------------------
 // Implement DOM on Math Operator
 
-add.addEventListener("click", function () {
+document.getElementById("add").addEventListener("click", function () {
     checkOperator();
-    calculate.value += "+";
+    document.getElementById("calculate").value += "+";
     temp = "+"
-    number = "";
-    disableOperatorButton(true);
 });
-substract.addEventListener("click", function () {
+document.getElementById("substract").addEventListener("click", function () {
     checkOperator();
-    calculate.value += "-";
+    document.getElementById("calculate").value += "-";
     temp = "-"
-    number = "";
-    disableOperatorButton(true);
 });
-multiply.addEventListener("click", function () {
+document.getElementById("multiply").addEventListener("click", function () {
     checkOperator();
-    calculate.value += "x";
+    document.getElementById("calculate").value += "x";
     temp = "x"
-    number = "";
-    disableOperatorButton(true);
 });
-divide.addEventListener("click", function () {
+document.getElementById("divide").addEventListener("click", function () {
     checkOperator();
-    calculate.value += ":";
+    document.getElementById("calculate").value += ":";
     temp = ":"
-    number = "";
-    disableOperatorButton(true);
 });
-modulo.addEventListener("click", function () {
+document.getElementById("modulo").addEventListener("click", function () {
     checkOperator();
-    calculate.value += "mod";
+    document.getElementById("calculate").value += "mod";
     temp = "mod"
-    number = "";
-    disableOperatorButton(true);
-    console.log(result);
 });
-equal.addEventListener("click", function () {
+document.getElementById("equal").addEventListener("click", function () {
     checkOperator();
-    output.innerHTML = calculate.value + " = " + result;
-    calculate.value = "";
-    console.log(result);
+    document.getElementById("output").innerHTML = document.getElementById("calculate").value + " = " + result;
+    document.getElementById("calculate").value = "";
     reset();
-    disableOperatorButton(true);
 });
 
 //------------------------------------------------------------------
