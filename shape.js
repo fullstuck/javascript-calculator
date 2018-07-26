@@ -25,17 +25,19 @@ const cylinderVolume = (phi, radius, height) => phi * (radius * radius) * height
 // Implement DOM
 
 document.getElementById("combobox").addEventListener("click", function () {
-    var value = document.getElementById("combobox");
+    var value = document.getElementById("combobox").value;
     if (value == "rectangle") {
         document.getElementById("label2").style.display = "inline";
         document.getElementById("textbox2").style.display = "inline";
         document.getElementById("label1").innerHTML = "Length";
         document.getElementById("perimeter").innerHTML = "Calculate Perimeter";
+        console.log("rec")
     } else if (value == "square") {
         document.getElementById("label1").innerHTML = "Side";
         document.getElementById("label2").style.display = "none";
         document.getElementById("textbox2").style.display = "none";
         document.getElementById("perimeter").innerHTML = "Calculate Perimeter";
+        console.log("squ")
     } else if (value == "circle") {
         document.getElementById("label1").innerHTML = "Radius";
         document.getElementById("label2").style.display = "none";
