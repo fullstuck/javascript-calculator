@@ -1,12 +1,6 @@
 "use strict";
 
 // Declare Variable
-
-let length = 0;
-let width = 0;
-let height = 0;
-let radius = 0;
-let total = 0;
 const phi = Math.PI;
 
 //------------------------------------------------------------------
@@ -38,27 +32,33 @@ const showTextbox = () => {
 
 $("#combobox").on("change", function () {
     const value = $("#combobox").val();
-    if (value === "rectangle") {
-        showTextbox();
-        $("#label1").html("Length");
-        $("#perimeter").html("Calculate Perimeter");
-    } else if (value === "square") {
-        hideTextbox();
-        $("#label1").html("Side");
-        $("#perimeter").html("Calculate Perimeter");
-    } else if (value === "circle") {
-        hideTextbox();
-        $("#label1").html("Radius");
-        $("#perimeter").html("Calculate Perimeter");
-    } else if (value === "cube") {
-        hideTextbox();
-        $("#label1").html("Side");
-        $("#perimeter").html("Calculate Volume");
-    } else if (value === "cylinder") {
-        showTextbox();
-        $("#label1").html("Radius");
-        $("#label2").html("Height");
-        $("#perimeter").html("Calculate Volume");
+    switch (value) {
+        case "rectangle":
+            showTextbox();
+            $("#label1").html("Length");
+            $("#perimeter").html("Calculate Perimeter");
+            break;
+        case "square":
+            hideTextbox();
+            $("#label1").html("Side");
+            $("#perimeter").html("Calculate Perimeter");
+            break;
+        case "circle":
+            hideTextbox();
+            $("#label1").html("Radius");
+            $("#perimeter").html("Calculate Perimeter");
+            break;
+        case "cube":
+            hideTextbox();
+            $("#label1").html("Side");
+            $("#perimeter").html("Calculate Volume");
+            break;
+        case "cylinder":
+            showTextbox();
+            $("#label1").html("Radius");
+            $("#label2").html("Height");
+            $("#perimeter").html("Calculate Volume");
+            break;
     }
 });
 
