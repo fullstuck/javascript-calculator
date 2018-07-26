@@ -61,8 +61,6 @@ const checkOperator = () => {
     }
 }
 
-const disableKeyboard = () => document.onkeydown = (e) => false;
-
 //------------------------------------------------------------------
 //Disable Operator Button
 disableOperatorButton(true);
@@ -91,7 +89,6 @@ add.addEventListener("click", function () {
     temp = "+"
     number = "";
     disableOperatorButton(true);
-    console.log(result);
 });
 substract.addEventListener("click", function () {
     checkOperator();
@@ -99,7 +96,6 @@ substract.addEventListener("click", function () {
     temp = "-"
     number = "";
     disableOperatorButton(true);
-    console.log(result);
 });
 multiply.addEventListener("click", function () {
     checkOperator();
@@ -107,7 +103,6 @@ multiply.addEventListener("click", function () {
     temp = "x"
     number = "";
     disableOperatorButton(true);
-    console.log(result);
 });
 divide.addEventListener("click", function () {
     checkOperator();
@@ -115,7 +110,6 @@ divide.addEventListener("click", function () {
     temp = ":"
     number = "";
     disableOperatorButton(true);
-    console.log(result);
 });
 modulo.addEventListener("click", function () {
     checkOperator();
