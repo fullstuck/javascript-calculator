@@ -33,6 +33,11 @@ combobox.addEventListener("click", function () {
         label2.style.display = "none";
         textbox2.style.display = "none";
         perimeter.innerHTML = "Calculate Perimeter";
+    } else if (value == "cube") {
+        label1.innerHTML = "Side";
+        label2.style.display = "none";
+        textbox2.style.display = "none";
+        perimeter.innerHTML = "Calculate Volume";
     } else {
         alert("Choose the shape first!");
     }
@@ -53,6 +58,10 @@ area.addEventListener("click", function () {
         radius = textbox1.value;
         total = circleArea(phi, radius);
         answer.value = total;
+    } else if (value == "cube") {
+        side = textbox1.value;
+        total = cubeArea(side);
+        answer.value = total;
     } else {
         alert("Choose the shape first!");
     }
@@ -72,6 +81,10 @@ perimeter.addEventListener("click", function () {
     } else if (value == "circle") {
         radius = textbox1.value;
         total = circleCircumference(phi, radius);
+        answer.value = total;
+    } else if (value == "cube") {
+        side = textbox1.value;
+        total = cubeVolume(side);
         answer.value = total;
     } else {
         alert("Choose the shape first!")
