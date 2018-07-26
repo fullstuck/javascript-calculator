@@ -1,10 +1,12 @@
+"use strict";
+
 // Declare Variable
 
-let length;
-let width;
-let height;
-let radius;
-let total;
+let length = 0;
+let width = 0;
+let height = 0;
+let radius = 0;
+let total = 0;
 const phi = Math.PI;
 
 //------------------------------------------------------------------
@@ -34,8 +36,8 @@ const showTextbox = () => {
 //------------------------------------------------------------------
 // Implement DOM
 
-$("#combobox").on("click", function () {
-    var value = $("#combobox").val();
+$("#combobox").on("change", function () {
+    const value = $("#combobox").val();
     if (value === "rectangle") {
         showTextbox();
         $("#label1").html("Length");
@@ -61,23 +63,23 @@ $("#combobox").on("click", function () {
 });
 
 $("#area").on("click", function () {
-    var value = $("#combobox").val();
+    const value = $("#combobox").val();
     if (value === "rectangle") {
-        length = $('#textbox1').val();
-        width = $('#textbox2').val();
+        const length = $('#textbox1').val();
+        const width = $('#textbox2').val();
         $('#answer').val(rectangleArea(length, width));
     } else if (value === "square") {
-        side = $('#textbox1').val();
+        const side = $('#textbox1').val();
         $('#answer').val(squareArea(side));
     } else if (value === "circle") {
-        radius = $('#textbox1').val();
+        const radius = $('#textbox1').val();
         $('#answer').val(circleArea(phi, radius));
     } else if (value === "cube") {
-        side = $('#textbox1').val();
+        const side = $('#textbox1').val();
         $('#answer').val(cubeArea(side));
     } else if (value === "cylinder") {
-        radius = $('#textbox1').val();
-        height = $('#textbox2').val();
+        const radius = $('#textbox1').val();
+        const height = $('#textbox2').val();
         $('#answer').val(cylinderArea(phi, radius, height));
     } else {
         alert("Choose the shape first!");
@@ -87,21 +89,21 @@ $("#area").on("click", function () {
 $("#perimeter").on("click", function () {
     var value = $("#combobox").val();
     if (value === "rectangle") {
-        length = $('#textbox1').val();
-        width = $('#textbox2').val();
+        const length = $('#textbox1').val();
+        const width = $('#textbox2').val();
         $('#answer').val(rectanglePerimeter(length, width));
     } else if (value === "square") {
-        side = $('#textbox1').val();
+        const side = $('#textbox1').val();
         $('#answer').val(squarePerimeter(side));
     } else if (value === "circle") {
-        radius = $('#textbox1').val();
+        const radius = $('#textbox1').val();
         $('#answer').val(circleCircumference(phi, radius));
     } else if (value === "cube") {
-        side = $('#textbox1').val();
+        const side = $('#textbox1').val();
         $('#answer').val(cubeVolume(side));
     } else if (value === "cylinder") {
-        radius = $('#textbox1').val();
-        height = $('#textbox2').val();
+        const radius = $('#textbox1').val();
+        const height = $('#textbox2').val();
         $('#answer').val(cylinderVolume(phi, radius, height));
     } else {
         alert("Choose the shape first!")
