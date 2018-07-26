@@ -1,3 +1,10 @@
+.header {
+    background-image: url("header.jpg");
+    color: cornsilk;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: right;
+}
+
 .numButton {
     margin: 2px;
     padding: 10px 20px;
@@ -12,6 +19,7 @@
 
 .input {
     width: 306px;
+    margin-top: 5px;
 }
 
 .text {
@@ -19,6 +27,22 @@
     margin-left: 10px;
 }
 
-.combobox {
-    min-width: 300px;
+.select {
+    padding: 10px 70px;
+    margin: 15px;
+}
+
+.app {
+    background-color: white;
+    float: center;
+    border: 1px solid black;
+    position: center;
+    margin-right: 21px;
+    width: 200px;
+    border-radius: 5px;
+    height: 350px;
+}
+
+.outcome {
+    margin: 0px;
 }
