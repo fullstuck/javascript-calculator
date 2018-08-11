@@ -1,0 +1,23 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Learn how to make calculator with javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alifraher/javascript-calculator.git"
+  },
+  "keywords": [
+    "calculator",
+    "javascript"
+  ],
+  "author": "M Alif Raher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alifraher/javascript-calculator/issues"
+  },
+  "homepage": "https://github.com/alifraher/javascript-calculator#readme"
+}
